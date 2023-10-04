@@ -25,7 +25,7 @@ const playGame = () => {
     console.log(`Question: ${randomNumber}`);
 
     const answer = readlineSync.question('Your answer: ');
-    if (((isEven(randomNumber) === 'yes') && (answer === 'yes')) || ((isEven(randomNumber) === 'no') && (answer === 'no'))) {
+    if ((isEven(randomNumber) === answer)) {
       console.log('Correct!');
     } else {
       const correctAnswer = isEven(randomNumber);
