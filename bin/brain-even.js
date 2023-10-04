@@ -4,7 +4,14 @@ import readlineSync from 'readline-sync';
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
-const isEven = () => {
+const isEven = (number) => {
+  if (number % 2 === 0) {
+    return 'yes';
+  }
+  return 'no';
+};
+
+const playGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name? ');
@@ -18,10 +25,10 @@ const isEven = () => {
     console.log(`Question: ${randomNumber}`);
 
     const answer = readlineSync.question('Your answer: ');
-    if (((randomNumber % 2 === 0) && (answer === 'yes')) || ((randomNumber % 2 !== 0) && (answer === 'no'))) {
+    if (((isEven(randomNumber) === 'yes') && (answer === 'yes')) || ((isEven(randomNumber) === 'no') && (answer === 'no'))) {
       console.log('Correct!');
     } else {
-      const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+      const correctAnswer = isEven(randomNumber);
       const endOfGame = `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
       return endOfGame;
     }
@@ -32,4 +39,4 @@ const isEven = () => {
   return happyEnd;
 };
 
-console.log(isEven());
+console.log(playGame());
