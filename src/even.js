@@ -28,11 +28,13 @@ const playGame = () => {
     } else {
       const correctAnswer = isEven(randomNumber);
       const endOfGame = `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
+      console.log(endOfGame);
       return endOfGame;
     }
   }
 
   const happyEnd = `Congratulations, ${userName}!`;
+  console.log(happyEnd);
 
   return happyEnd;
 };
