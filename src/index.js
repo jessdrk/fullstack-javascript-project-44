@@ -2,6 +2,25 @@ import readlineSync from 'readline-sync';
 import { getDescriptionEven, getQuestionAndAnswerEven } from './games/even.js';
 import { getDescriptionCalc, getQuestionAndAnswerCalc } from './games/calc.js';
 
+const switchGames = (game) => {
+  let array;
+  switch (game) {
+    case 'even': {
+      array = getQuestionAndAnswerEven();
+      break;
+    }
+    case 'calc': {
+      array = getQuestionAndAnswerCalc();
+      break;
+    }
+    default: {
+      console.log('error');
+    }
+  }
+
+  return array;
+};
+
 const playGame = (game) => {
   console.log('Welcome to the Brain Games!');
 
@@ -25,23 +44,9 @@ const playGame = (game) => {
   console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
-    let question;
-    let correctAnswer;
-
-    switch (game) {
-      case 'even': {
-        [question, correctAnswer] = getQuestionAndAnswerEven();
-        break;
-      }
-      case 'calc': {
-        [question, correctAnswer] = getQuestionAndAnswerCalc();
-        break;
-      }
-      default: {
-        console.log('error');
-      }
-    }
-
+    const array = switchGames(game);
+    const question = array[0];
+    const correctAnswer = array[1];
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
