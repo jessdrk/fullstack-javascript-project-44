@@ -7,30 +7,18 @@ import getDataOfPrime from './games/prime.js';
 
 const switchGames = (game) => {
   let array;
-  switch (game) {
-    case 'even': {
-      array = getDataOfEven();
-      break;
-    }
-    case 'calc': {
-      array = getDataOfCalc();
-      break;
-    }
-    case 'gsd': {
-      array = getDataOfGSD();
-      break;
-    }
-    case 'progression': {
-      array = getDataOfProgression();
-      break;
-    }
-    case 'prime': {
-      array = getDataOfPrime();
-      break;
-    }
-    default: {
-      console.log('error'); }
+  if (game === 'even') {
+    array = getDataOfEven();
+  } else if (game === 'calc') {
+    array = getDataOfCalc;
+  } else if (game === 'gsd') {
+    array = getDataOfGSD();
+  } else if (game === 'progression') {
+    array = getDataOfProgression();
+  } else if (game === 'prime') {
+    array = getDataOfPrime();
   }
+
   return array;
 };
 
