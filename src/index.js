@@ -3,6 +3,7 @@ import getDataOfEven from './games/even.js';
 import getDataOfCalc from './games/calc.js';
 import getDataOfGSD from './games/gsd.js';
 import getDataOfProgression from './games/progression.js';
+import getDataOfPrime from './games/prime.js';
 
 const switchGames = (game) => {
   let array;
@@ -21,6 +22,10 @@ const switchGames = (game) => {
     }
     case 'progression': {
       array = getDataOfProgression();
+      break;
+    }
+    case 'prime': {
+      array = getDataOfPrime();
       break;
     }
     default: {

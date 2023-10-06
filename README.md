@@ -11,5 +11,8 @@
 ### Brain-gsd
 [![asciicast](https://asciinema.org/a/612337.svg)](https://asciinema.org/a/612337)
 
-## Brain-progression
+### Brain-progression
 [![asciicast](https://asciinema.org/a/612339.svg)](https://asciinema.org/a/612339)
+
+### Brain-prime
+[![asciicast](https://asciinema.org/a/612397.svg)](https://asciinema.org/a/612397)
