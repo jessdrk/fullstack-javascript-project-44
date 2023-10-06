@@ -23,33 +23,27 @@ const switchGames = (game) => {
 
 const playGame = (game) => {
   console.log('Welcome to the Brain Games!');
-
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-
-  let description;
   switch (game) {
     case 'even': {
-      description = getDescriptionEven();
+      console.log(getDescriptionEven());
       break;
     }
     case 'calc': {
-      description = getDescriptionCalc();
+      console.log(getDescriptionCalc());
       break;
     }
     default: {
       console.log('error');
     }
   }
-  console.log(description);
-
   for (let i = 0; i < 3; i += 1) {
     const array = switchGames(game);
     const question = array[0];
     const correctAnswer = array[1];
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-
     if (correctAnswer === answer) {
       console.log('Correct!');
     } else {
@@ -58,10 +52,8 @@ const playGame = (game) => {
       return endOfGame;
     }
   }
-
   const happyEnd = `Congratulations, ${userName}!`;
   console.log(happyEnd);
-
   return happyEnd;
 };
 
