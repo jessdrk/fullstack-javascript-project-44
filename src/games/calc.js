@@ -23,12 +23,8 @@ const countExpression = (number1, number2, operator) => {
   return result;
 };
 
-export const getDescriptionCalc = () => {
-  const result = 'What is the result of the expression?';
-  return result;
-};
-
-export const getQuestionAndAnswerCalc = () => {
+const getDataOfCalc = () => {
+  const description = 'What is the result of the expression?';
   const operators = ['+', '-', '*'];
   const randomOperand1 = getRandomInt(25);
   const randomOperand2 = getRandomInt(25);
@@ -36,5 +32,7 @@ export const getQuestionAndAnswerCalc = () => {
   const question = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
   const correctAnswer = String(countExpression(randomOperand1, randomOperand2, randomOperator));
 
-  return [question, correctAnswer];
+  return [question, correctAnswer, description];
 };
+
+export default getDataOfCalc;

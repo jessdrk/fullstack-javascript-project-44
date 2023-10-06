@@ -1,35 +1,16 @@
 import readlineSync from 'readline-sync';
-import { getDescriptionEven, getQuestionAndAnswerEven } from './games/even.js';
-import { getDescriptionCalc, getQuestionAndAnswerCalc } from './games/calc.js';
-
-const switchDescription = (game) => {
-  let description;
-  switch (game) {
-    case 'even': {
-      description = getDescriptionEven();
-      break;
-    }
-    case 'calc': {
-      description = getDescriptionCalc();
-      break;
-    }
-    default: {
-      console.log('error');
-    }
-  }
-
-  return description;
-};
+import getDataOfEven from './games/even.js';
+import getDataOfCalc from './games/calc.js';
 
 const switchGames = (game) => {
   let array;
   switch (game) {
     case 'even': {
-      array = getQuestionAndAnswerEven();
+      array = getDataOfEven();
       break;
     }
     case 'calc': {
-      array = getQuestionAndAnswerCalc();
+      array = getDataOfCalc();
       break;
     }
     default: {
@@ -44,7 +25,7 @@ const playGame = (game) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(switchDescription(game));
+  console.log((switchGames(game)[2]));
   for (let i = 0; i < 3; i += 1) {
     const array = switchGames(game);
     const question = array[0];

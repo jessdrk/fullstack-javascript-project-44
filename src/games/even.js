@@ -7,13 +7,11 @@ const isEven = (number) => {
   return 'no';
 };
 
-export const getDescriptionEven = () => {
-  const result = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return result;
+const getDataOfEven = () => {
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const question = getRandomInt(100);
+  const correctAnswer = isEven(question);
+  return [question, correctAnswer, description];
 };
 
-export const getQuestionAndAnswerEven = () => {
-  const randomNumber = getRandomInt(100);
-  const correctAnswer = isEven(randomNumber);
-  return [randomNumber, correctAnswer];
-};
+export default getDataOfEven;
