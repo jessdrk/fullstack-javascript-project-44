@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import getDataOfEven from './games/even.js';
 import getDataOfCalc from './games/calc.js';
+import getDataOfGSD from './games/gsd.js';
 
 const switchGames = (game) => {
   let array;
@@ -11,6 +12,10 @@ const switchGames = (game) => {
     }
     case 'calc': {
       array = getDataOfCalc();
+      break;
+    }
+    case 'gsd': {
+      array = getDataOfGSD();
       break;
     }
     default: {

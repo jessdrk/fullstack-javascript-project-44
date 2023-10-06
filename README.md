@@ -7,3 +7,6 @@
 
 ### Brain-calc
 [![asciicast](https://asciinema.org/a/612325.svg)](https://asciinema.org/a/612325)
+
+### Brain-gsd
+[![asciicast](https://asciinema.org/a/612337.svg)](https://asciinema.org/a/612337)
