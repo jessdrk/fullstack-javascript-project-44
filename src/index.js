@@ -29,10 +29,8 @@ const switchGames = (game) => {
       break;
     }
     default: {
-      console.log('error');
-    }
+      console.log('error'); }
   }
-
   return array;
 };
 
