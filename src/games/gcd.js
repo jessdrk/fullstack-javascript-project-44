@@ -1,6 +1,6 @@
 import getRandomInt from '../functions/randomInt.js';
 
-const findGSD = (a, b) => {
+const findGCD = (a, b) => {
   const maxNumber = Math.max(a, b);
   let GCD;
   let value1 = a;
@@ -25,7 +25,7 @@ const getDataOfGCD = () => {
   const randomNumber1 = getRandomInt(100);
   const randomNumber2 = getRandomInt(100);
   const question = `${randomNumber1} ${randomNumber2}`;
-  const correctAnswer = String(findGSD(randomNumber1, randomNumber2));
+  const correctAnswer = String(findGCD(randomNumber1, randomNumber2));
 
   return [question, correctAnswer, description];
 };
