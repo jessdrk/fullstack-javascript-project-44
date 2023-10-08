@@ -12,11 +12,10 @@ const numberIsNotZero = () => {
 
 const isPrime = (num) => {
   let result;
-  if (num === 1) {
+  if (num === 1 || num === 2) {
     return 'yes';
-  } if (num === 2) {
-    return 'no';
   }
+
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return 'no';
