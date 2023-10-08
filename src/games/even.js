@@ -8,7 +8,7 @@ const isEven = (number) => {
 };
 
 const getDataOfEven = () => {
-  const description = 'Answer "yes" if the number is even, otherwise answer "no"';
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   const question = getRandomInt(100);
   const correctAnswer = isEven(question);
   return [question, correctAnswer, description];
