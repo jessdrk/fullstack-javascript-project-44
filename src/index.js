@@ -10,7 +10,7 @@ const switchGames = (game) => {
   if (game === 'even') {
     array = getDataOfEven();
   } else if (game === 'calc') {
-    array = getDataOfCalc;
+    array = getDataOfCalc();
   } else if (game === 'gsd') {
     array = getDataOfGSD();
   } else if (game === 'progression') {
