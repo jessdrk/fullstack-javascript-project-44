@@ -2,13 +2,13 @@ import getRandomInt from '../functions/randomInt.js';
 
 const findGSD = (a, b) => {
   const maxNumber = Math.max(a, b);
-  let GSD;
+  let GCD;
   let value1 = a;
   let value2 = b;
 
   for (let i = 0; i <= maxNumber; i += 1) {
     if (value1 === value2) {
-      GSD = value1;
+      GCD = value1;
       break;
     } else if (value1 > value2) {
       value1 -= value2;
@@ -17,10 +17,10 @@ const findGSD = (a, b) => {
     }
   }
 
-  return GSD;
+  return GCD;
 };
 
-const getDataOfGSD = () => {
+const getDataOfGCD = () => {
   const description = 'Find the greatest common divisor of given numbers.';
   const randomNumber1 = getRandomInt(100);
   const randomNumber2 = getRandomInt(100);
@@ -30,4 +30,4 @@ const getDataOfGSD = () => {
   return [question, correctAnswer, description];
 };
 
-export default getDataOfGSD;
+export default getDataOfGCD;

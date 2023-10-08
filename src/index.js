@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import getDataOfEven from './games/even.js';
 import getDataOfCalc from './games/calc.js';
-import getDataOfGSD from './games/gsd.js';
+import getDataOfGCD from './games/gcd.js';
 import getDataOfProgression from './games/progression.js';
 import getDataOfPrime from './games/prime.js';
 
@@ -11,8 +11,8 @@ const switchGames = (game) => {
     array = getDataOfEven();
   } else if (game === 'calc') {
     array = getDataOfCalc();
-  } else if (game === 'gsd') {
-    array = getDataOfGSD();
+  } else if (game === 'gcd') {
+    array = getDataOfGCD();
   } else if (game === 'progression') {
     array = getDataOfProgression();
   } else if (game === 'prime') {

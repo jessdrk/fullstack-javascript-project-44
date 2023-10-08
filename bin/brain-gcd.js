@@ -2,4 +2,4 @@
 
 import playGame from '../src/index.js';
 
-playGame('gsd');
+playGame('gcd');

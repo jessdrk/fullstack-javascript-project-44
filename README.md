@@ -22,8 +22,8 @@ npm link / sudo npm link
 ### Brain-calc
 [![asciicast](https://asciinema.org/a/612325.svg)](https://asciinema.org/a/612325)
 
-### Brain-gsd
-[![asciicast](https://asciinema.org/a/612337.svg)](https://asciinema.org/a/612337)
+### Brain-gcd
+[![asciicast](https://asciinema.org/a/612720.svg)](https://asciinema.org/a/612720)
 
 ### Brain-progression
 [![asciicast](https://asciinema.org/a/612339.svg)](https://asciinema.org/a/612339)
