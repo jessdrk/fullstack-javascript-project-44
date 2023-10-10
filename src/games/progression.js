@@ -1,4 +1,5 @@
 import getRandomInt from '../functions/randomInt.js';
+import playGame from '../index.js';
 
 const createProgression = () => {
   let firstItem = getRandomInt(20);
@@ -18,13 +19,16 @@ const createProgression = () => {
   return [arrToStr, valueOfHiddenItem];
 };
 
-const getDataOfProgression = () => {
-  const description = 'What number is missing in the progression?';
-  const array = createProgression();
-  const question = array[0];
-  const correctAnswer = String(array[1]);
+const description = 'What number is missing in the progression?';
 
-  return [question, correctAnswer, description];
+const getDataOfProgression = () => {
+  const [question, correctAnswer] = createProgression();
+
+  return [String(question), String(correctAnswer)];
 };
 
-export default getDataOfProgression;
+const runGame = () => {
+  playGame(getDataOfProgression, description);
+};
+
+export default runGame;
