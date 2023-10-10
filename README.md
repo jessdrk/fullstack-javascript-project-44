@@ -6,6 +6,7 @@
 ```bash
 git clone
 make install
+sudo npm link
 ```
 
 ### Игры разума / Mind games
@@ -14,35 +15,30 @@ make install
 
 ### Brain-even
 ```bash
-sudo npm link
 brain-even
 ```
 [![asciicast](https://asciinema.org/a/611939.svg)](https://asciinema.org/a/611939)
 
 ### Brain-calc
 ```bash
-sudo npm link
 brain-calc
 ```
 [![asciicast](https://asciinema.org/a/612325.svg)](https://asciinema.org/a/612325)
 
 ### Brain-gcd
 ```bash
-sudo npm link
 brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/612720.svg)](https://asciinema.org/a/612720)
 
 ### Brain-progression
 ```bash
-sudo npm link
 brain-progression
 ```
 [![asciicast](https://asciinema.org/a/612339.svg)](https://asciinema.org/a/612339)
 
 ### Brain-prime
 ```bash
-sudo npm link
 brain-prime
 ```
 [![asciicast](https://asciinema.org/a/612397.svg)](https://asciinema.org/a/612397)
