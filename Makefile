@@ -25,4 +25,5 @@ publish:
 lint:
 	npx eslint .
 
-test: npm test
+test: 
+	npm test
