@@ -1,15 +1,5 @@
-import getRandomInt from '../functions/randomInt.js';
+import numberIsNotZero from '../functions/numberIsNotZero.js';
 import playGame from '../index.js';
-
-const numberIsNotZero = () => {
-  let number;
-
-  while (number === 0 || number === undefined) {
-    number = getRandomInt(100);
-  }
-
-  return number;
-};
 
 const isPrime = (num) => {
   let result;

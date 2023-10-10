@@ -1,4 +1,4 @@
-import getRandomInt from '../functions/randomInt.js';
+import numberIsNotZero from '../functions/numberIsNotZero.js';
 import playGame from '../index.js';
 
 const findGCD = (a, b) => {
@@ -24,8 +24,8 @@ const findGCD = (a, b) => {
 const description = 'Find the greatest common divisor of given numbers.';
 
 const getDataOfGCD = () => {
-  const randomNumber1 = getRandomInt(100);
-  const randomNumber2 = getRandomInt(100);
+  const randomNumber1 = numberIsNotZero();
+  const randomNumber2 = numberIsNotZero();
   const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = findGCD(randomNumber1, randomNumber2);
 
