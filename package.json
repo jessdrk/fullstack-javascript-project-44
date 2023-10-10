@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/jessdrk/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/jessdrk/fullstack-javascript-project-44/actions)",
+  "description": "https://github.com/jessdrk/fullstack-javascript-project-44 “Mind Games” is a set of five console games",
   "type": "module",
   "main": "index.js",
   "scripts": {
