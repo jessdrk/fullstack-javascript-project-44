@@ -3,11 +3,9 @@ import playGame from '../index.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
-
   for (let i = 0; i <= length; i += 1) {
     progression.push(start + step * i);
   }
-
   return progression;
 };
 
@@ -31,7 +29,6 @@ const getDataOfProgression = () => {
   const hiddenItem = getRandomInt(1, 10);
   const correctAnswer = String(getHiddenItem(progression, hiddenItem));
   const question = hideItem(progression, hiddenItem);
-
   return [question, correctAnswer];
 };
 

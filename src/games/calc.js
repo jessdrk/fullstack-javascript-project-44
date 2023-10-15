@@ -17,7 +17,6 @@ const getDataOfCalc = () => {
   const randomOperator = operators[getRandomInt(0, 2)];
   const question = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
   const correctAnswer = String(countExpression(randomOperand1, randomOperand2, randomOperator));
-
   return [question, correctAnswer];
 };
 
