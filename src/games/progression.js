@@ -1,28 +1,36 @@
 import getRandomInt from '../functions/randomInt.js';
 import playGame from '../index.js';
 
-const createProgression = () => {
-  let firstItem = getRandomInt(1, 20);
-  const difference = getRandomInt(1, 8);
-  const hiddenItem = getRandomInt(1, 10);
-  const array = [];
+const generateProgression = (start, step, length) => {
+  const progression = [];
 
-  for (let i = 0; i <= 10; i += 1) {
-    array.push(firstItem);
-    firstItem += difference;
+  for (let i = 0; i <= length; i += 1) {
+    progression.push(start + step * i);
   }
 
-  const valueOfHiddenItem = array[hiddenItem];
-  array[hiddenItem] = '..';
-  const arrToStr = array.join(' ');
+  return progression;
+};
 
-  return [arrToStr, valueOfHiddenItem];
+const getHiddenItem = (array, num) => {
+  const valueOfHiddenItem = array[num];
+  return valueOfHiddenItem;
+};
+
+const hideItem = (array, num) => {
+  const result = array;
+  result[num] = '..';
+  const arrToStr = result.join(' ');
+  return arrToStr;
 };
 
 const getDataOfProgression = () => {
-  let [question, correctAnswer] = createProgression();
-  question = String(question);
-  correctAnswer = String(correctAnswer);
+  const start = getRandomInt(1, 20);
+  const step = getRandomInt(1, 8);
+  const length = 10;
+  const progression = generateProgression(start, step, length);
+  const hiddenItem = getRandomInt(1, 10);
+  const correctAnswer = String(getHiddenItem(progression, hiddenItem));
+  const question = hideItem(progression, hiddenItem);
 
   return [question, correctAnswer];
 };
