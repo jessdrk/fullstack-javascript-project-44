@@ -2,26 +2,12 @@ import getRandomInt from '../functions/randomInt.js';
 import playGame from '../index.js';
 
 const countExpression = (number1, number2, operator) => {
-  let result;
-
   switch (operator) {
-    case '+': {
-      result = number1 + number2;
-      break;
-    }
-    case '-': {
-      result = number1 - number2;
-      break;
-    }
-    case '*': {
-      result = number1 * number2;
-      break;
-    }
-    default:
-      console.log('error');
+    case '+': return number1 + number2;
+    case '-': return number1 - number2;
+    case '*': return number1 * number2;
+    default: throw new Error(`Invalid operator - ${operator}`);
   }
-
-  return result;
 };
 
 const description = 'What is the result of the expression?';
@@ -30,7 +16,7 @@ const getDataOfCalc = () => {
   const operators = ['+', '-', '*'];
   const randomOperand1 = getRandomInt(1, 25);
   const randomOperand2 = getRandomInt(1, 25);
-  const randomOperator = operators[getRandomInt(1, 3)];
+  const randomOperator = operators[getRandomInt(0, 2)];
   const question = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
   const correctAnswer = countExpression(randomOperand1, randomOperand2, randomOperator);
 
