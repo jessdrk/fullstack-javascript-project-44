@@ -1,16 +1,11 @@
 import getRandomInt from '../functions/randomInt.js';
 import playGame from '../index.js';
 
-const isEven = (number) => {
-  if (number % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+const isEven = (number) => number % 2 === 0;
 
 const getDataOfEven = () => {
   const question = String(getRandomInt());
-  const correctAnswer = String(isEven(question));
+  const correctAnswer = String(isEven(question) ? 'yes' : 'no');
   return [question, correctAnswer];
 };
 

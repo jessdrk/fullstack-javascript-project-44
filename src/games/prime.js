@@ -3,24 +3,22 @@ import getRandomInt from '../functions/randomInt.js';
 
 const isPrime = (num) => {
   const number = Number(num);
-  let result;
   if (number === 1 || number === 2) {
-    return 'yes';
+    return true;
   }
 
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
-    result = 'yes';
   }
 
-  return result;
+  return true;
 };
 
 const getDataOfPrime = () => {
   const question = String(getRandomInt());
-  const correctAnswer = String(isPrime(question));
+  const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
 
   return [question, correctAnswer];
 };
