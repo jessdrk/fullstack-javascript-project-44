@@ -14,10 +14,12 @@ const playGame = (generateRound, description) => {
     if (correctAnswer === answer) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      return;
     }
   }
-  return console.log(`Congratulations, ${userName}!`);
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default playGame;
