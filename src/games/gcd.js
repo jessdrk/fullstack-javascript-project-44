@@ -1,24 +1,10 @@
 import playGame from '../index.js';
 import getRandomInt from '../functions/randomInt.js';
 
-const findGCD = (a, b) => {
-  const maxNumber = Math.max(a, b);
-  let GCD;
-  let value1 = a;
-  let value2 = b;
-
-  for (let i = 0; i <= maxNumber; i += 1) {
-    if (value1 === value2) {
-      GCD = value1;
-      break;
-    } else if (value1 > value2) {
-      value1 -= value2;
-    } else if (value1 < value2) {
-      value2 -= value1;
-    }
-  }
-
-  return GCD;
+const findGCD = (num1, num2) => {
+  if (num1 === 0) {
+    return num2;
+  } return findGCD(num2 % num1, num1);
 };
 
 const getDataOfGCD = () => {
