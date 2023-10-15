@@ -10,8 +10,6 @@ const countExpression = (number1, number2, operator) => {
   }
 };
 
-const description = 'What is the result of the expression?';
-
 const getDataOfCalc = () => {
   const operators = ['+', '-', '*'];
   const randomOperand1 = getRandomInt(1, 25);
@@ -24,6 +22,7 @@ const getDataOfCalc = () => {
 };
 
 const runGame = () => {
+  const description = 'What is the result of the expression?';
   playGame(getDataOfCalc, description);
 };
 

@@ -8,8 +8,6 @@ const isEven = (number) => {
   return 'no';
 };
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-
 const getDataOfEven = () => {
   const question = String(getRandomInt());
   const correctAnswer = String(isEven(question));
@@ -17,6 +15,7 @@ const getDataOfEven = () => {
 };
 
 const runGame = () => {
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   playGame(getDataOfEven, description);
 };
 

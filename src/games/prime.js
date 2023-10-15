@@ -18,8 +18,6 @@ const isPrime = (num) => {
   return result;
 };
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 const getDataOfPrime = () => {
   const question = String(getRandomInt());
   const correctAnswer = String(isPrime(question));
@@ -28,6 +26,7 @@ const getDataOfPrime = () => {
 };
 
 const runGame = () => {
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   playGame(getDataOfPrime, description);
 };
 

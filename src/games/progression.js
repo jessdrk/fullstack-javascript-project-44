@@ -19,8 +19,6 @@ const createProgression = () => {
   return [arrToStr, valueOfHiddenItem];
 };
 
-const description = 'What number is missing in the progression?';
-
 const getDataOfProgression = () => {
   let [question, correctAnswer] = createProgression();
   question = String(question);
@@ -30,6 +28,7 @@ const getDataOfProgression = () => {
 };
 
 const runGame = () => {
+  const description = 'What number is missing in the progression?';
   playGame(getDataOfProgression, description);
 };
 
