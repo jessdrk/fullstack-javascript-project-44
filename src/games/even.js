@@ -11,7 +11,7 @@ const isEven = (number) => {
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getDataOfEven = () => {
-  const question = getRandomInt(100);
+  const question = getRandomInt();
   const correctAnswer = isEven(question);
   return [String(question), String(correctAnswer)];
 };

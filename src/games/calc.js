@@ -28,9 +28,9 @@ const description = 'What is the result of the expression?';
 
 const getDataOfCalc = () => {
   const operators = ['+', '-', '*'];
-  const randomOperand1 = getRandomInt(25);
-  const randomOperand2 = getRandomInt(25);
-  const randomOperator = operators[getRandomInt(3)];
+  const randomOperand1 = getRandomInt(1, 25);
+  const randomOperand2 = getRandomInt(1, 25);
+  const randomOperator = operators[getRandomInt(1, 3)];
   const question = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
   const correctAnswer = countExpression(randomOperand1, randomOperand2, randomOperator);
 

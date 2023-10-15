@@ -2,9 +2,9 @@ import getRandomInt from '../functions/randomInt.js';
 import playGame from '../index.js';
 
 const createProgression = () => {
-  let firstItem = getRandomInt(20);
-  const difference = getRandomInt(8);
-  const hiddenItem = getRandomInt(10);
+  let firstItem = getRandomInt(1, 20);
+  const difference = getRandomInt(1, 8);
+  const hiddenItem = getRandomInt(1, 10);
   const array = [];
 
   for (let i = 0; i <= 10; i += 1) {

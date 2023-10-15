@@ -1,5 +1,5 @@
-import numberIsNotZero from '../functions/numberIsNotZero.js';
 import playGame from '../index.js';
+import getRandomInt from '../functions/randomInt.js';
 
 const isPrime = (num) => {
   let result;
@@ -20,7 +20,7 @@ const isPrime = (num) => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getDataOfPrime = () => {
-  const question = numberIsNotZero();
+  const question = getRandomInt();
   const correctAnswer = isPrime(question);
 
   return [String(question), String(correctAnswer)];

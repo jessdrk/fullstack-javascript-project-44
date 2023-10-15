@@ -1,5 +1,5 @@
-import numberIsNotZero from '../functions/numberIsNotZero.js';
 import playGame from '../index.js';
+import getRandomInt from '../functions/randomInt.js';
 
 const findGCD = (a, b) => {
   const maxNumber = Math.max(a, b);
@@ -24,8 +24,8 @@ const findGCD = (a, b) => {
 const description = 'Find the greatest common divisor of given numbers.';
 
 const getDataOfGCD = () => {
-  const randomNumber1 = numberIsNotZero();
-  const randomNumber2 = numberIsNotZero();
+  const randomNumber1 = getRandomInt();
+  const randomNumber2 = getRandomInt();
   const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = findGCD(randomNumber1, randomNumber2);
 
