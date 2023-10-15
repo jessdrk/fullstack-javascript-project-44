@@ -22,9 +22,11 @@ const createProgression = () => {
 const description = 'What number is missing in the progression?';
 
 const getDataOfProgression = () => {
-  const [question, correctAnswer] = createProgression();
+  let [question, correctAnswer] = createProgression();
+  question = String(question);
+  correctAnswer = String(correctAnswer);
 
-  return [String(question), String(correctAnswer)];
+  return [question, correctAnswer];
 };
 
 const runGame = () => {

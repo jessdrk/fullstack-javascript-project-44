@@ -27,9 +27,9 @@ const getDataOfGCD = () => {
   const randomNumber1 = getRandomInt();
   const randomNumber2 = getRandomInt();
   const question = `${randomNumber1} ${randomNumber2}`;
-  const correctAnswer = findGCD(randomNumber1, randomNumber2);
+  const correctAnswer = String(findGCD(randomNumber1, randomNumber2));
 
-  return [String(question), String(correctAnswer)];
+  return [question, correctAnswer];
 };
 
 const runGame = () => {

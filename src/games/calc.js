@@ -18,9 +18,9 @@ const getDataOfCalc = () => {
   const randomOperand2 = getRandomInt(1, 25);
   const randomOperator = operators[getRandomInt(0, 2)];
   const question = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
-  const correctAnswer = countExpression(randomOperand1, randomOperand2, randomOperator);
+  const correctAnswer = String(countExpression(randomOperand1, randomOperand2, randomOperator));
 
-  return [String(question), String(correctAnswer)];
+  return [question, correctAnswer];
 };
 
 const runGame = () => {
