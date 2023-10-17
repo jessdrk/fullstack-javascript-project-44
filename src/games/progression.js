@@ -9,11 +9,6 @@ const generateProgression = (start, step, length) => {
   return progression;
 };
 
-const getHiddenItem = (array, num) => {
-  const valueOfHiddenItem = array[num];
-  return valueOfHiddenItem;
-};
-
 const hideItem = (array, num) => {
   const result = array;
   result[num] = '..';
@@ -27,7 +22,7 @@ const getDataOfProgression = () => {
   const length = 10;
   const progression = generateProgression(start, step, length);
   const hiddenItem = getRandomInt(1, 10);
-  const correctAnswer = String(getHiddenItem(progression, hiddenItem));
+  const correctAnswer = String(progression[hiddenItem]);
   const question = hideItem(progression, hiddenItem);
   return [question, correctAnswer];
 };
